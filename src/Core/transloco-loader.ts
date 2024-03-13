@@ -5,7 +5,8 @@ import { map, Observable } from "rxjs";
 
 @Injectable({ providedIn: 'root' })
 export class TranslocoHttpLoader implements TranslocoLoader {
-    constructor(private translationsClient:TranslationsClient) {
+
+  constructor(private translationsClient:TranslationsClient) {
     }
     getTranslation(lang: string): Observable<Translation> {
       return this.translationsClient.getTranslations(new TranslateMeta({
